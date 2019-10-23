@@ -1,0 +1,13 @@
+PARTS:
+S1 9V? external power supply
+R1 220R
+Q1 2N2222
+V1 VTL5C vactrol
+P1 B10K potmeter
+
+
+CONNECTIONS:
+Port6 connected to R1
+R1 connected to V1 positive
+V1 negative connected to GNF
+P1 connected to GND, 5V (arduino) and PortA0
