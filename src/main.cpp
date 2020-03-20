@@ -20,13 +20,12 @@ void loop() {
     pot_controls_vactrol();
 }
 
-// Motor speed is controlled by a potmeter
+// Vactrol voltage is controlled by a potmeter
 void pot_controls_vactrol() {
     output = analogRead(pot_pin);
     motor_value = map(output, 0, 1023, 0, 255);
     voltage = map(output, 0, 1023, 0, 50);
-    // if (motor_value == 60)
-    //     motor_value = 0;
+
     analogWrite(aout1_pin, motor_value);    
     Serial.println(voltage);
     delay(500);
